@@ -1,31 +1,62 @@
-```markdown
-# Hospital Data Cleaning Project
+# 🏥 Hospital Data Cleaning Project
 
-This project involves cleaning and preprocessing a hospital dataset (`hospital_data_unclean.csv`) using Python and the Pandas library. The cleaned data is then saved to a new CSV file (`Hospital_data_cleaned.csv`).
+## 📌 Project Overview
+This project focuses on cleaning and preprocessing a hospital dataset (`hospital_data_unclean.csv`) using **Python** and the **Pandas** library.  
 
-## Dataset Overview
-The original dataset `hospital_data_unclean.csv` contains various information related to hospital admissions, including patient demographics, medical conditions, billing, and admission details.
+The goal is to transform raw, inconsistent data into a clean and structured dataset (`hospital_data_cleaned.csv`) suitable for analysis and reporting.
 
-## Cleaning Steps Performed
-The following data cleaning and preprocessing steps were applied to the dataset:
+---
 
-1.  **Load Data**:
-    *   The `hospital_data_unclean.csv` file was loaded into a Pandas DataFrame.
+## 📂 Dataset Overview
+The dataset contains hospital-related information such as:
 
-2.  **Handle Missing Values**:
-    *   **Name**: Null values in the 'Name' column were filled with 'unknown'.
-    *   **Age**: Null values in the 'Age' column were filled with the mean age of the column.
-    *   **Gender**: Null values in the 'Gender' column were filled with the mode (most frequent value) of the column.
-    *   **Blood Type**: Null values in the 'Blood Type' column were filled with the mode of the column.
-    *   **Medical Condition**: Null values in the 'Medical Condition' column were filled with 'unknown'.
-    *   **Doctor**: Null values in the 'Doctor' column were filled with 'unknown'.
-    *   **Hospital**: Null values in the 'Hospital' column were filled with 'unknown'.
-    *   **Insurance Provider**: Null values in the 'Insurance Provider' column were filled with 'unknown'.
-    *   **Room Number**: Null values in the 'Room Number' column were filled with 'not assigned'.
-    *   **Admission Type**: Null values in the 'Admission Type' column were filled with 'unknown'.
-    *   **Medication**: Null values in the 'Medication' column were filled with 'unknown'.
-    *   **Test Results**: Null values in the 'Test Results' column were filled with 'unknown'.
+- Patient demographics (Name, Age, Gender)
+- Medical details (Blood Type, Medical Condition, Medication)
+- Admission details (Admission Type, Room Number)
+- Operational data (Doctor, Hospital, Insurance Provider, Test Results)
 
-3.  **Standardize Data Formats**:
-    *   **Name**: Converted all names to title case (e.g., "john doe" -> "John Doe").
-    *   **Gender**: Replaced 
+---
+
+## 🧹 Data Cleaning Steps
+
+### 1. Load Data
+- Imported the dataset into a Pandas DataFrame for processing.
+
+---
+
+### 2. Handle Missing Values
+Missing values were treated using appropriate strategies:
+
+- **Name** → filled with `'Unknown'`
+- **Age** → filled with **mean age**
+- **Gender** → filled with **mode**
+- **Blood Type** → filled with **mode**
+- **Medical Condition** → filled with `'Unknown'`
+- **Doctor** → filled with `'Unknown'`
+- **Hospital** → filled with `'Unknown'`
+- **Insurance Provider** → filled with `'Unknown'`
+- **Room Number** → filled with `'Not Assigned'`
+- **Admission Type** → filled with `'Unknown'`
+- **Medication** → filled with `'Unknown'`
+- **Test Results** → filled with `'Unknown'`
+
+---
+
+### 3. Standardize Data Formats
+Data was standardized for consistency:
+
+- **Name** → converted to **Title Case** (e.g., `john doe → John Doe`)
+- **Gender** → standardized values (e.g., `male, Male → Male`)
+- **Text Columns** → cleaned extra spaces and inconsistent formatting
+
+---
+
+### 4. Data Quality Improvements
+- Removed duplicate records (if any)
+- Fixed inconsistent entries
+- Ensured proper data types for each column
+
+---
+
+### 5. Export Cleaned Data
+- Saved the cleaned dataset as:
